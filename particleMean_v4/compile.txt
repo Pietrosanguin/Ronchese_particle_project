@@ -1,0 +1,13 @@
+ c++ -Wall -o main *cpp 
+./main sim 100
+OR
+./main input particle_events.txt
+
+typical output 
+
+output 
+
+470
+0.497614 0.000212629
+302
+1.11568 2.86875e-05

@@ -1,0 +1,11 @@
+export LD_LIBRARY_PATH=.
+./compile
+
+then 
+./runDump sim 1000 dump
+./runAll input particle_events.txt MassPlot nameHistoMass.root ranges ranges.txt TimePlot nameHistoTime.root fitters fitters.txt
+
+MassPlot is keyword for printing a mass plot
+TimePlot is keyword for printing a time plot
+ranges is keyword for setting particle ranges (from file or manually)
+fitters is keyword for setting particle fitters(from file or manually)

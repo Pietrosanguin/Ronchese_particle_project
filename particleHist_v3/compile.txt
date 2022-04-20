@@ -1,0 +1,20 @@
+ c++ -Wall -I. `root-config --cflags` -o main *cpp `root-config --libs`
+./main sim 100 MassPlot nomehisto.root
+OR
+./main input particle_events.txt MassPlot nomehisto.root
+
+typical output 
+
+output (values of number of events, mean and rms)
+
+470
+0.497614 0.000212629
+302
+1.11568 2.86875e-05
+
+root -l nomehisto.root
+.ls
+K0->Draw();
+
+All the compile commands work on Ubuntu 20.04 LTS
+

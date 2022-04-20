@@ -1,0 +1,19 @@
+ c++ -Wall -I. `root-config --cflags` -o main *cpp `root-config --libs`
+./main sim 100
+OR
+./main input particle_events.txt
+
+typical output 
+
+output 
+
+470
+0.497614 0.000212629
+302
+1.11568 2.86875e-05
+
+root -l histogram.root
+.ls
+K0->Draw();
+
+All the compile commands work on Ubuntu 20.04 LTS

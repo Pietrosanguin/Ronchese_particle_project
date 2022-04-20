@@ -1,0 +1,9 @@
+ c++ -Wall -o main *cpp 
+./main
+
+output 
+
+media K0: 0.497614
+media L0: 1.11568
+rms K0: 0.000212629
+rms L0: 2.86875e-05

@@ -1,0 +1,23 @@
+ c++ -Wall -I. `root-config --cflags` -o main *cpp *h `root-config --libs`
+ 
+./main sim 1000 MassPlot namehistoMass.root TimePlot namehistoTime.root
+OR
+./main input particle_events.txt MassPlot namehistoMass.root TimePlot namehistoTime.root
+
+typical output 
+
+output (values of number of events, mean and rms)
+
+470
+0.992614 0.000212889
+302
+2.23068 2.86556e-05
+
+two root plots mass_namehistoMass.root time_namehistoTime.root
+
+root -l time_namehistoTime.root
+.ls
+K0_time->Draw();
+
+All the compile commands work on Ubuntu 20.04 LTS
+

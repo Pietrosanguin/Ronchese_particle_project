@@ -1,0 +1,31 @@
+ c++ -Wall -I. `root-config --cflags` -o main *cpp *h `root-config --libs`
+ 
+ Using ranges and fitters from txt files:
+ 
+./main sim 1000 MassPlot namehistoMass.root TimePlot namehistoTime.root ranges ranges.txt fitters fitters.txt
+OR
+./main input particle_events.txt MassPlot namehistoMass.root TimePlot namehistoTime.root ranges ranges.txt fitters fitters.txt
+
+Setting manually ranges and fitters
+
+./main sim 1000 MassPlot namehistoMass.root TimePlot namehistoTime.root ranges set fitters set
+
+or
+./main input particle_events.txt MassPlot namehistoMass.root TimePlot namehistoTime.root ranges set fitters set
+
+typical output (with selected ranges):
+output (values of number of events, mean and rms)
+
+470
+0.992614 0.000212889
+302
+2.23068 2.86556e-05
+
+two root plots mass_namehistoMass.root time_namehistoTime.root 
+
+root -l time_namehistoTime.root
+.ls
+K0->Draw();
+
+All the compile commands work on Ubuntu 20.04 LTS
+
